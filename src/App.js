@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import Game from './components/Game'
 import Cell from './components/Cell'
+import Win from './components/Win'
+import Lose from './components/Lose'
 
 class App extends Component {
   render() {
@@ -8,6 +10,8 @@ class App extends Component {
       <section>
         <Game />
         <Cell />
+        <Win />
+        <Lose />
       </section>
     )
   }

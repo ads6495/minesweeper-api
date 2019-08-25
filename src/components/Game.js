@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 import Cell from './Cell'
+import Win from './Win'
+import Lose from './Lose'
 
 
 class Game extends Component {
@@ -79,7 +81,7 @@ class Game extends Component {
   render() {
     return (
       <main>
-        <h1 className="title">MINESWEEPER</h1>
+        <h1 className="title">Sweep the mines</h1>
         <section>
           <table className='cell-table'>
             <tbody>
@@ -102,8 +104,8 @@ class Game extends Component {
           </table>
         </section>
 
-        {/* {this.state.win && !this.state.lose && <Win />} */}
-        {/* {this.state.lose && !this.state.win && <Lose />} */}
+        {this.state.win && !this.state.Lose && <Win />}
+        {this.state.lose && !this.state.win && <Lose />}
 
       </main>
 

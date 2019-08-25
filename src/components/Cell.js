@@ -1,12 +1,20 @@
 import React, { Component } from 'react';
 
-
 class Cell extends Component {
   render() {
     return (
-      < td onClick={this.props.onClick} > {this.props.display}</td >
-    )
+      <>
+        <td className='cell'
+          onContextMenu={e => {
+            this.props.rightClick()
+            e.preventDefault()
+          }}
+          onClick={this.props.onClick}>
+          {this.props.display}
+        </td>
+      </>
+    );
   }
 }
 
-export default Cell;
+export default Cell
