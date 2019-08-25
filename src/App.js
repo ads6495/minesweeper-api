@@ -1,9 +1,15 @@
 import React, { Component } from 'react'
-import HelloWorld from './components/HelloWorld'
+import Game from './components/Game'
+import Cell from './components/Cell'
 
 class App extends Component {
   render() {
-    return <HelloWorld />
+    return (
+      <section>
+        <Game />
+        <Cell />
+      </section>
+    )
   }
 }
 
